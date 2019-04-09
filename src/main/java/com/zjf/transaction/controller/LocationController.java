@@ -33,7 +33,7 @@ public class LocationController {
 
     @ResponseBody
     @RequestMapping(value = "/university", produces = {"application/json;charset=UTF-8"})
-    public List<University> getUniversitybyCityName(String cityName) {
+    public List<University> getUniversityByCityName(String cityName) {
         return locationService.getUniversityByCityName(cityName);
     }
 }
