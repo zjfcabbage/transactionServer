@@ -1,5 +1,7 @@
 package com.zjf.transaction.model;
 
+import org.springframework.context.annotation.Bean;
+
 public class Province {
     private int provinceId;
     private String provinceName;

@@ -1,39 +1,36 @@
 package com.zjf.transaction.controller;
 
 
-import com.zjf.transaction.model.City;
-import com.zjf.transaction.model.Province;
-import com.zjf.transaction.model.University;
+import com.zjf.transaction.data.Data;
+import com.zjf.transaction.data.ResponseUtil;
 import com.zjf.transaction.service.LocationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
-@Controller
-@RequestMapping(value = "/location")
+@RestController
+@RequestMapping("/location")
 public class LocationController {
 
     @Autowired
     private LocationService locationService;
 
     @ResponseBody
-    @RequestMapping(value = "/province", produces = {"application/json;charset=UTF-8"})
-    public List<Province> getProvince() {
-        return locationService.getProvince();
+    @RequestMapping("/province")
+    public Data getProvince() {
+        return ResponseUtil.success(locationService.getProvince());
     }
 
     @ResponseBody
-    @RequestMapping(value = "/city", produces = {"application/json;charset=UTF-8"})
-    public List<City> getCityByProvinceId(int provinceId) {
-        return locationService.getCityByProvinceId(provinceId);
+    @RequestMapping("/city")
+    public Data getCityByProvinceId(int provinceId) {
+        return ResponseUtil.success(locationService.getCityByProvinceId(provinceId));
     }
 
     @ResponseBody
-    @RequestMapping(value = "/university", produces = {"application/json;charset=UTF-8"})
-    public List<University> getUniversityByCityName(String cityName) {
-        return locationService.getUniversityByCityName(cityName);
+    @RequestMapping("/university")
+    public Data getUniversityByCityId(int cityId) {
+        return ResponseUtil.success(locationService.getUniversityByCityId(cityId));
     }
 }

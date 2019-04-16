@@ -5,6 +5,7 @@ public class University {
     private String universityName;
     private int provinceId;
     private String cityName;
+    private int cityId;
 
     public int getUniversityId() {
         return universityId;
@@ -36,5 +37,13 @@ public class University {
 
     public void setCityName(String cityName) {
         this.cityName = cityName;
+    }
+
+    public int getCityId() {
+        return cityId;
+    }
+
+    public void setCityId(int cityId) {
+        this.cityId = cityId;
     }
 }

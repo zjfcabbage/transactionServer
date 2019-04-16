@@ -11,5 +11,5 @@ public interface LocationService {
 
     List<City> getCityByProvinceId(int provinceId);
 
-    List<University> getUniversityByCityName(String cityName);
+    List<University> getUniversityByCityId(int cityId);
 }
