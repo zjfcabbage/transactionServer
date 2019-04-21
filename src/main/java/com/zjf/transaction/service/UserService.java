@@ -1,11 +1,18 @@
 package com.zjf.transaction.service;
 
+import com.zjf.transaction.data.Data;
 import com.zjf.transaction.model.User;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface UserService {
-    User getUser(String userId);
+    Data getUser(String userId);
 
-    void addUser(User user);
+    Data registerUser(User user);
 
-    void updateUserPassword(String password, String userId);
+    Data updateUserPassword(String password, String userId);
+
+
+    Data updateUserName(String userName, String userId);
+
+    Data uploadUserPic(MultipartFile file);
 }

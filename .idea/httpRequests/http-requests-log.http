@@ -1,0 +1,394 @@
+GET http://127.0.0.1:8080/user/get?userId=6b47L81W4m4d93A8e146&userId=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-20T112249.200.json
+
+###
+
+GET http://127.0.0.1:8080/user/get?userId=6b47L81W4m4d93A8e146
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-20T112237.200.json
+
+###
+
+GET http://127.0.0.1:8080/user/get?userId=6b47L81W4m4d93A8e146
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8080/location/province
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T070809.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T053303.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/province
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T053301.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T053241.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T052954.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T052953.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T052950.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T052842.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T052816.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T052741.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/province
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T051639.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T051253.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T050539.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/province
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T050527.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T050504.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/provinc
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T050440.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/province
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T050415.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/province
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T050301.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045820.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=-1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045808.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=-1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045646.500.json
+
+###
+
+GET http://127.0.0.1:8080/location/cit?provinceId=-1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045303.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=-1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045256.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=0
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045228.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045213.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city\?provinceId=3
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045153.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2&city_id=2&cityId=5&cityId=5&provinceId=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T045101.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/province
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T044127.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/province?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2&city_id=2&cityId=5&cityId=5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T044107.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/province?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2&city_id=2&cityId=5&cityId=5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T044051.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T044022.200.json
+
+###
+
+GET http://localhost/location/province
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T043927.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025832.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?provinceId=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025827.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/university?cityId=6
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025810.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/university?cityId=5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025759.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/university？cityId=5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025742.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/university?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2&city_id=2&cityId=5&cityId=5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025646.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/university?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2&city_id=2&cityId=5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025638.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/university?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2&city_id=2&cityId=5
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025551.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/university?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2&city_id=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025527.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/university?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025520.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025506.200.json
+
+###
+
+GET http://127.0.0.1:8080/location/?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025502.404.json
+
+###
+
+GET http://127.0.0.1:8080/location/city?province_id=1&province_id=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1&cityName="北京市"&cityName=北京市&cityName='北京市'&cityName=北京市&cityName=北京市&province=1&cityName='北京市'&cityId=1&provinceId=1&provinceId=1&provinceId=1&provinceId=1;&cityId=1&cityId=1&cityId=1&cityId=1&provinceId=2;&provinceId=2&provinceId=4&provinceId=2&provinceId=5&cityId=1&provinceId=1&provinceId=6&provinceid=2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-15T025500.200.json
+
+###
+
