@@ -37,6 +37,9 @@ public class UserServiceImpl implements UserService {
     public Data registerUser(User user) {
         if (user != null) {
             logger.debug(user.toString());
+            if (isUserNameExisted(user.getUserName()) != null) {
+                return ResponseUtil.error(0, "用户名已存在");
+            }
             userMapper.registerUser(
                     user.getUserId(),
                     user.getUserName(),
@@ -60,6 +63,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Data updateUserName(String userName, String userId) {
+        if (userName == null || userId == null) {
+            return ResponseUtil.error(0, "参数错误");
+        } else if (isUserNameExisted(userName) != null) {
+            return ResponseUtil.error(0, "用户名已存在");
+        }
         userMapper.updateUserName(userName, userId);
         return ResponseUtil.success();
     }
@@ -99,5 +107,21 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         }
         return data;
+    }
+
+    @Override
+    public Data login(String userName, String password) {
+        if (userName == null || password == null) {
+            return ResponseUtil.error(0, "参数错误");
+        }
+        return ResponseUtil.success(userMapper.login(userName, password));
+    }
+
+    @Override
+    public User isUserNameExisted(String userName) {
+        if (userName == null) {
+            return null;
+        }
+        return userMapper.isUserNameExisted(userName);
     }
 }

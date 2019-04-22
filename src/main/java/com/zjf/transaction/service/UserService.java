@@ -17,4 +17,8 @@ public interface UserService {
     Data uploadUserPic(MultipartFile file);
 
     byte[] getUserPic(String userId, String fileName);
+
+    Data login(String userName, String password);
+
+    User isUserNameExisted(String userName);
 }

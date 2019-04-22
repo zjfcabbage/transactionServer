@@ -24,4 +24,10 @@ public interface UserMapper {
 
     @Update("update t_user set user_name=#{userName} where user_id=#{userId}")
     void updateUserName(@Param("userName") String userName, @Param("userId") String userId);
+
+    @Select("select * from t_user where user_name=#{userName} and password=#{password}")
+    User login(@Param("userName") String userName, @Param("password") String password);
+
+    @Select("select * from t_user where user_name=#{userName}")
+    User isUserNameExisted(@Param("userName") String userName);
 }

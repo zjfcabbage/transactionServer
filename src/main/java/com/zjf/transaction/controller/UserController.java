@@ -34,7 +34,7 @@ public class UserController {
 
     @ResponseBody
     @RequestMapping(value = "/user/update/userName", method = RequestMethod.PUT)
-    public Data updateUserName(String userName, String userId) {
+    public Data updateUserName(@RequestParam String userName, @RequestParam String userId) {
         return userService.updateUserName(userName, userId);
     }
 
@@ -45,8 +45,14 @@ public class UserController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "image/{userId}/{fileName}", method = RequestMethod.GET, produces = {MediaType.IMAGE_GIF_VALUE, MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_GIF_VALUE})
+    @RequestMapping(value = "/image/{userId}/{fileName}", method = RequestMethod.GET, produces = {MediaType.IMAGE_GIF_VALUE, MediaType.IMAGE_JPEG_VALUE, MediaType.IMAGE_GIF_VALUE})
     public byte[] getUserPic(@PathVariable String userId, @PathVariable String fileName) {
         return userService.getUserPic(userId, fileName);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/user/login", method = RequestMethod.POST)
+    public Data login(@RequestParam String userName, @RequestParam String password) {
+        return userService.login(userName, password);
     }
 }
