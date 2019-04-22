@@ -64,4 +64,17 @@ public class User {
     public void setUniversity(String university) {
         this.university = university;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", password='" + password + '\'' +
+                ", userPicUrl='" + userPicUrl + '\'' +
+                ", province='" + province + '\'' +
+                ", city='" + city + '\'' +
+                ", university='" + university + '\'' +
+                '}';
+    }
 }

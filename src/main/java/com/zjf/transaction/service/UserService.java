@@ -15,4 +15,6 @@ public interface UserService {
     Data updateUserName(String userName, String userId);
 
     Data uploadUserPic(MultipartFile file);
+
+    byte[] getUserPic(String userId, String fileName);
 }
