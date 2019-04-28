@@ -20,5 +20,5 @@ public interface UserService {
 
     Data login(String userName, String password);
 
-    User isUserNameExisted(String userName);
+    Data isUserNameExisted(String userName);
 }

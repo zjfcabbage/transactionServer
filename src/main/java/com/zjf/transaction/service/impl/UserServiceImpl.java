@@ -37,18 +37,18 @@ public class UserServiceImpl implements UserService {
     public Data registerUser(User user) {
         if (user != null) {
             logger.debug(user.toString());
-            if (isUserNameExisted(user.getUserName()) != null) {
+            if (userMapper.isUserNameExisted(user.getUserName()) != null) {
                 return ResponseUtil.error(0, "用户名已存在");
             }
             userMapper.registerUser(
                     user.getUserId(),
                     user.getUserName(),
                     user.getPassword(),
-                    user.getUserPicUrl(),
+                    user.getUserPicUrl(),  //null
                     user.getProvince(),
                     user.getCity(),
                     user.getUniversity());
-            return ResponseUtil.success();
+            return ResponseUtil.success(userMapper.getUser(user.getUserId()));
         } else {
             return ResponseUtil.error(0, "参数错误");
         }
@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
     public Data updateUserName(String userName, String userId) {
         if (userName == null || userId == null) {
             return ResponseUtil.error(0, "参数错误");
-        } else if (isUserNameExisted(userName) != null) {
+        } else if (userMapper.isUserNameExisted(userName) != null) {
             return ResponseUtil.error(0, "用户名已存在");
         }
         userMapper.updateUserName(userName, userId);
@@ -86,9 +86,11 @@ public class UserServiceImpl implements UserService {
                 userPath.mkdirs();
             }
             String userPicUrl = USER_PIC_URL + userId + File.separator + fileName;
-            File destPath = new File(USER_PIC_PATH + File.separator + fileName);
+            //    /home/transaction/image/{userId}/{fileName}
+            File destPath = new File(USER_PIC_PATH + File.separator + userId + File.separator + fileName);
             try {
                 file.transferTo(destPath);
+                userMapper.updateUserPicUrl(userId, userPicUrl); //更新user表的头像链接
                 return ResponseUtil.success(userPicUrl);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -118,10 +120,10 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User isUserNameExisted(String userName) {
+    public Data isUserNameExisted(String userName) {
         if (userName == null) {
-            return null;
+            return ResponseUtil.error(0, "userName is null");
         }
-        return userMapper.isUserNameExisted(userName);
+        return ResponseUtil.success(userMapper.isUserNameExisted(userName));
     }
 }

@@ -55,4 +55,10 @@ public class UserController {
     public Data login(@RequestParam String userName, @RequestParam String password) {
         return userService.login(userName, password);
     }
+
+    @ResponseBody
+    @RequestMapping(value = "/user/exist", method = RequestMethod.GET)
+    public Data isUserNameExisted(String userName) {
+        return userService.isUserNameExisted(userName);
+    }
 }

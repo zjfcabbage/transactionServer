@@ -30,4 +30,7 @@ public interface UserMapper {
 
     @Select("select * from t_user where user_name=#{userName}")
     User isUserNameExisted(@Param("userName") String userName);
+
+    @Update("update t_user set user_pic =#{userPicUrl} where user_id=#{userId}")
+    void updateUserPicUrl(@Param("userId") String userId, @Param("userPicUrl") String userPicUrl);
 }
