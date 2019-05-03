@@ -61,4 +61,9 @@ public class UserController {
     public Data isUserNameExisted(String userName) {
         return userService.isUserNameExisted(userName);
     }
+
+    @GetMapping(value = "/user/getPic")
+    public Data getUserPic(String userId) {
+        return userService.getUserPic(userId);
+    }
 }

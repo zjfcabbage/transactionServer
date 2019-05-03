@@ -126,4 +126,12 @@ public class UserServiceImpl implements UserService {
         }
         return ResponseUtil.success(userMapper.isUserNameExisted(userName));
     }
+
+    @Override
+    public Data getUserPic(String userId) {
+        if (userId == null) {
+            return ResponseUtil.error(0, "参数错误");
+        }
+        return ResponseUtil.success(userMapper.getUserPic(userId));
+    }
 }

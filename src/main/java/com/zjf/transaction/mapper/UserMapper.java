@@ -33,4 +33,7 @@ public interface UserMapper {
 
     @Update("update t_user set user_pic =#{userPicUrl} where user_id=#{userId}")
     void updateUserPicUrl(@Param("userId") String userId, @Param("userPicUrl") String userPicUrl);
+
+    @Select("select user_pic from t_user where user_id=#{userId}")
+    String getUserPic(@Param("userId") String userId);
 }

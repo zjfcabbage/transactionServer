@@ -21,4 +21,6 @@ public interface UserService {
     Data login(String userName, String password);
 
     Data isUserNameExisted(String userName);
+
+    Data getUserPic(String userId);
 }
