@@ -21,7 +21,6 @@ public class MainServiceImpl implements MainService {
 
     private static final String ROOT_DIR = "/home/transaction/image/";
 //    private static final String ROOT_DIR = "d:\\test\\";
-    private static final String COMMODITY_PIC_URL = "http://47.100.61.176:8080/image/";
 
     @Autowired
     private MainMapper mainMapper;
@@ -42,43 +41,10 @@ public class MainServiceImpl implements MainService {
     }
 
     @Override
-    public Data uploadImages(String id, List<MultipartFile> files) {
-        if (id == null || files.isEmpty()) {
-            return ResponseUtil.error(0, "参数错误");
-        }
-        String[] strings = id.split("--");
-        String userId = "";
-        if (strings.length > 0) {
-            userId = strings[0];
-        }
-        StringJoiner imageUrlJoiner = new StringJoiner("@@@"); //以@@@做url的分隔符
-
-        File parent = new File(ROOT_DIR + userId + File.separator + id);
-        if (!parent.exists()) {
-            parent.mkdirs();
-        }
-        int i= 0;
-        for (; i < files.size(); i++) {
-            String fileName = files.get(i).getOriginalFilename();
-            try {
-                files.get(i).transferTo(new File(parent, fileName));
-                imageUrlJoiner.add(COMMODITY_PIC_URL + userId + File.separator + id + File.separator +fileName);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        if (i == files.size()) {
-            mainMapper.updateImageUrl(imageUrlJoiner.toString(), id);
-            LoggerFactory.getLogger(getClass().getName()).debug(imageUrlJoiner.toString());
-            return ResponseUtil.success();
-        } else {
-            return ResponseUtil.error(0, "文件传输出错");
-        }
-    }
-
-    @Override
     public Data getAll(int pageNum) {
         PageHelper.startPage(pageNum, 20);
         return ResponseUtil.success(mainMapper.getAll());
     }
+
+
 }

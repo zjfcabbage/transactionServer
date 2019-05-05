@@ -4,7 +4,6 @@ import com.zjf.transaction.model.Commodity;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 
@@ -15,11 +14,8 @@ public interface MainMapper {
                  @Param("userId") String userId,
                  @Param("imageUrl") String imageUrl,
                  @Param("msg") String msg,
-                 @Param("price") float price,
+                 @Param("price") String price,
                  @Param("publishTime") long publishTime);
-
-    @Update("update t_commodity set image_url=#{imageUrl} where id=#{id}")
-    void updateImageUrl(String imageUrl, String id);
 
     @Select("select * from t_commodity")
     List<Commodity> getAll();

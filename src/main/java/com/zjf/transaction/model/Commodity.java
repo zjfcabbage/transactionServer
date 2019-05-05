@@ -5,7 +5,7 @@ public class Commodity {
     private String userId;
     private String imageUrl;
     private String msg;
-    private float price;
+    private String price;
     private long publishTime;
 
     public String getId() {
@@ -40,11 +40,11 @@ public class Commodity {
         this.msg = msg;
     }
 
-    public float getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
