@@ -13,8 +13,6 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
 
-        private static final String USER_PIC_PATH = "/home/transaction/image";
-//    private static final String USER_PIC_PATH = "D:\\test";
     private Logger logger = LoggerFactory.getLogger(getClass().getName());
 
     @Autowired
@@ -69,7 +67,9 @@ public class UserServiceImpl implements UserService {
         if (userName == null || password == null) {
             return ResponseUtil.error(0, "参数错误");
         }
-        return ResponseUtil.success(userMapper.login(userName, password));
+        User user = userMapper.login(userName, password);
+        logger.debug(user.toString());
+        return ResponseUtil.success(user);
     }
 
     @Override

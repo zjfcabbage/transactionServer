@@ -11,7 +11,7 @@ public interface UserMapper {
     @Select("SELECT * from t_user where user_id=#{userId}")
     User getUser(@Param("userId") String userId);
 
-    @Insert("insert into t_user(user_id, user_name, password, user_pic, province, city, university)" +
+    @Insert("insert into t_user(user_id, user_name, password, user_pic_url, province, city, university)" +
             "values(#{userId}, #{userName}, #{password}, #{userPicUrl}, " +
             "#{province}, #{city}, #{university})")
     void registerUser(@Param("userId") String userId, @Param("userName") String userName,
@@ -31,6 +31,6 @@ public interface UserMapper {
     @Select("select * from t_user where user_name=#{userName}")
     User isUserNameExisted(@Param("userName") String userName);
 
-    @Update("update t_user set user_pic =#{userPicUrl} where user_id=#{userId}")
+    @Update("update t_user set user_pic_url =#{userPicUrl} where user_id=#{userId}")
     void updateUserPicUrl(@Param("userId") String userId, @Param("userPicUrl") String userPicUrl);
 }

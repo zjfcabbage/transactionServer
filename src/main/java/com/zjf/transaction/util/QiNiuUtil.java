@@ -1,6 +1,7 @@
 package com.zjf.transaction.util;
 
 import com.qiniu.util.Auth;
+import com.qiniu.util.StringMap;
 
 public class QiNiuUtil {
     private static final String accessKey = "aH881J-YZJPRTR_7-79G5DjPuxWVHStbtf9_Lywo";
@@ -24,7 +25,7 @@ public class QiNiuUtil {
      */
     public static String getCoverToken(String fileKey) {
         Auth auth = Auth.create(accessKey, secretKey);
-        return auth.uploadToken(BUCKET, fileKey);
+        return auth.uploadToken(BUCKET, fileKey, 3600L, new StringMap().put("insertOnly", 0));
     }
 }
 

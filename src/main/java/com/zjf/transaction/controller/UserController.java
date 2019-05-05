@@ -47,4 +47,9 @@ public class UserController {
     public Data isUserNameExisted(String userName) {
         return userService.isUserNameExisted(userName);
     }
+
+    @PutMapping(value = "/user/update/image")
+    public Data updateUserPic(String userId, String userPicUrl) {
+        return userService.updateUserPic(userId, userPicUrl);
+    }
 }
