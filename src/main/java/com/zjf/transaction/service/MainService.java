@@ -7,4 +7,6 @@ public interface MainService {
     Data publish(Commodity commodity);
 
     Data getAll(int pageNum);
+
+    Data getCommodityById(String id);
 }

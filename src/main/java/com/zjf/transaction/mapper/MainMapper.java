@@ -9,9 +9,10 @@ import java.util.List;
 
 public interface MainMapper {
 
-    @Insert("insert into t_commodity(id, user_id,image_url, msg, price, publish_time) values(#{id},#{userId},#{imageUrl},#{msg},#{price},#{publishTime})")
+    @Insert("insert into t_commodity(id, user_id, name, image_url, msg, price, publish_time) values(#{id},#{userId},#{name},#{imageUrl},#{msg},#{price},#{publishTime})")
     void publish(@Param("id") String id,
                  @Param("userId") String userId,
+                 @Param("name") String name,
                  @Param("imageUrl") String imageUrl,
                  @Param("msg") String msg,
                  @Param("price") String price,
@@ -19,4 +20,7 @@ public interface MainMapper {
 
     @Select("select * from t_commodity")
     List<Commodity> getAll();
+
+    @Select("select * from t_commodity where id=#{id}")
+    Commodity getCommodityById(@Param("id") String id);
 }

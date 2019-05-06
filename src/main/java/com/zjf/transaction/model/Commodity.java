@@ -3,6 +3,7 @@ package com.zjf.transaction.model;
 public class Commodity {
     private String id;
     private String userId;
+    private String name;
     private String imageUrl;
     private String msg;
     private String price;
@@ -22,6 +23,14 @@ public class Commodity {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getImageUrl() {

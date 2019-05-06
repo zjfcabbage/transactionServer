@@ -24,6 +24,7 @@ public class MainServiceImpl implements MainService {
         LoggerFactory.getLogger(getClass().getName()).debug(commodity.toString());
         mainMapper.publish(commodity.getId(),
                 commodity.getUserId(),
+                commodity.getName(),
                 commodity.getImageUrl(),
                 commodity.getMsg(),
                 commodity.getPrice(),
@@ -37,5 +38,12 @@ public class MainServiceImpl implements MainService {
         return ResponseUtil.success(mainMapper.getAll());
     }
 
-
+    @Override
+    public Data getCommodityById(String id) {
+        if (id == null) {
+            return ResponseUtil.error(0, "id is null");
+        } else {
+            return ResponseUtil.success(mainMapper.getCommodityById(id));
+        }
+    }
 }

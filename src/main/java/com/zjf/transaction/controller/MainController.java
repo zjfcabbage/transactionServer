@@ -20,8 +20,13 @@ public class MainController {
         return mainService.publish(commodity);
     }
 
-    @GetMapping(value = "getAll")
+    @GetMapping(value = "/getAll")
     public Data getAll(@RequestParam(value = "pageNum") int pageNum) {
         return mainService.getAll(pageNum);
+    }
+
+    @GetMapping(value = "/getCommodityById")
+    public Data getCommodityById(String id) {
+        return mainService.getCommodityById(id);
     }
 }
