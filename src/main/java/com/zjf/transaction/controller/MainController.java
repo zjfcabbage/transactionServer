@@ -7,6 +7,8 @@ import com.zjf.transaction.service.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/main")
 public class MainController {
@@ -28,5 +30,10 @@ public class MainController {
     @GetMapping(value = "/getCommodityById")
     public Data getCommodityById(String id) {
         return mainService.getCommodityById(id);
+    }
+
+    @DeleteMapping(value = "/delete")
+    public Data delete(@RequestBody List<String> list) {
+        return mainService.delete(list);
     }
 }

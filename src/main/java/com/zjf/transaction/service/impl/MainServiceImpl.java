@@ -10,6 +10,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MainServiceImpl implements MainService {
     
@@ -45,5 +47,14 @@ public class MainServiceImpl implements MainService {
         } else {
             return ResponseUtil.success(mainMapper.getCommodityById(id));
         }
+    }
+
+    @Override
+    public Data delete(List<String> list) {
+        if (list.isEmpty()) {
+            return ResponseUtil.error(0, "commodity id list is null or empty");
+        }
+        mainMapper.deleteCommodity(list);
+        return ResponseUtil.success();
     }
 }

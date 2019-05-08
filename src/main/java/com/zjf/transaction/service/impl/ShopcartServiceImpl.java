@@ -70,4 +70,13 @@ public class ShopcartServiceImpl implements ShopcartService {
         shopcartMapper.delete(userId, commodityId);
         return ResponseUtil.success();
     }
+
+    @Override
+    public Data deleteMore(String userId, List<String> commodityIdList) {
+        if (userId == null || commodityIdList.isEmpty()) {
+            return ResponseUtil.error(0, "userId or commodity list is null");
+        }
+        shopcartMapper.deleteMore(userId, commodityIdList);
+        return ResponseUtil.success();
+    }
 }

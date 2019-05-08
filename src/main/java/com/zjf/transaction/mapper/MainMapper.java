@@ -1,6 +1,8 @@
 package com.zjf.transaction.mapper;
 
+import com.zjf.transaction.Provider;
 import com.zjf.transaction.model.Commodity;
+import org.apache.ibatis.annotations.DeleteProvider;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -23,4 +25,7 @@ public interface MainMapper {
 
     @Select("select * from t_commodity where id=#{id}")
     Commodity getCommodityById(@Param("id") String id);
+
+    @DeleteProvider(type = Provider.class, method = "batchDeleteMain")
+    void deleteCommodity(@Param("list") List<String> commodityIdList);
 }
