@@ -69,6 +69,9 @@ public class WebSocketServer {
     @OnMessage
     public void onMessage(String message, Session session) {
         log.debug("收到消息：" + message);
+        if ("ping".equals(message)) {
+            return;
+        }
         Msg msg = new Gson().fromJson(message, Msg.class);
         String toUserId = msg.getToId();
         WebSocketServer webSocketServer = webSocketMap.get(toUserId);
