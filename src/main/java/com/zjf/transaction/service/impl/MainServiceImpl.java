@@ -57,4 +57,13 @@ public class MainServiceImpl implements MainService {
         mainMapper.deleteCommodity(list);
         return ResponseUtil.success();
     }
+
+    @Override
+    public Data markCommodityIsSold(List<String> list) {
+        if (list.isEmpty()) {
+            return ResponseUtil.error(0, "参数为空");
+        }
+        mainMapper.markCommodityIsSold(list);
+        return ResponseUtil.success();
+    }
 }

@@ -13,4 +13,6 @@ public interface MainService {
     Data getCommodityById(String id);
 
     Data delete(List<String> list);
+
+    Data markCommodityIsSold(List<String> list);
 }

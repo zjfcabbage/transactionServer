@@ -33,4 +33,9 @@ public class ShopcartController {
     public Data deleteMore(String userId, @RequestBody List<String> list) {
         return shopcartService.deleteMore(userId, list);
     }
+
+    @GetMapping("/isExist")
+    public Data isShopcartExist(String userId, String commodityId) {
+        return shopcartService.isShopcartExist(userId, commodityId);
+    }
 }

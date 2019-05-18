@@ -8,6 +8,7 @@ public class Commodity {
     private String msg;
     private String price;
     private long publishTime;
+    private boolean isSold;
 
     public String getId() {
         return id;
@@ -65,15 +66,25 @@ public class Commodity {
         this.publishTime = publishTime;
     }
 
+    public boolean isSold() {
+        return isSold;
+    }
+
+    public void setSold(boolean sold) {
+        isSold = sold;
+    }
+
     @Override
     public String toString() {
         return "Commodity{" +
                 "id='" + id + '\'' +
-                ", msg='" + msg + '\'' +
-                ", imageUrl='" + imageUrl + '\'' +
-                ", price=" + price +
                 ", userId='" + userId + '\'' +
+                ", name='" + name + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", msg='" + msg + '\'' +
+                ", price='" + price + '\'' +
                 ", publishTime=" + publishTime +
+                ", isSold=" + isSold +
                 '}';
     }
 }

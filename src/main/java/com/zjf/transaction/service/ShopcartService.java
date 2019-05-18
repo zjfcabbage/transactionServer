@@ -12,4 +12,6 @@ public interface ShopcartService {
     Data delete(String userId, String commodityId);
 
     Data deleteMore(String userId, List<String> commodityIdList);
+
+    Data isShopcartExist(String userId, String commodityId);
 }

@@ -79,4 +79,12 @@ public class ShopcartServiceImpl implements ShopcartService {
         shopcartMapper.deleteMore(userId, commodityIdList);
         return ResponseUtil.success();
     }
+
+    @Override
+    public Data isShopcartExist(String userId, String commodityId) {
+        if (userId == null || commodityId == null) {
+            return ResponseUtil.error(0, "参数为空");
+        }
+        return ResponseUtil.success(shopcartMapper.isShopcartExist(userId, commodityId));
+    }
 }

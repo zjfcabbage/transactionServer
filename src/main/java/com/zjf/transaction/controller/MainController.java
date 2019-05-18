@@ -36,4 +36,9 @@ public class MainController {
     public Data delete(@RequestBody List<String> list) {
         return mainService.delete(list);
     }
+
+    @PostMapping(value = "/mark")
+    public Data markCommodityIsSold(@RequestBody List<String> list) {
+        return mainService.markCommodityIsSold(list);
+    }
 }

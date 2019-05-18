@@ -2,10 +2,7 @@ package com.zjf.transaction.mapper;
 
 import com.zjf.transaction.Provider;
 import com.zjf.transaction.model.Commodity;
-import org.apache.ibatis.annotations.DeleteProvider;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -20,7 +17,7 @@ public interface MainMapper {
                  @Param("price") String price,
                  @Param("publishTime") long publishTime);
 
-    @Select("select * from t_commodity")
+    @Select("select * from t_commodity where is_sold = 0")
     List<Commodity> getAll();
 
     @Select("select * from t_commodity where id=#{id}")
@@ -28,4 +25,7 @@ public interface MainMapper {
 
     @DeleteProvider(type = Provider.class, method = "batchDeleteMain")
     void deleteCommodity(@Param("list") List<String> commodityIdList);
+
+    @UpdateProvider(type = Provider.class, method = "batchUpdateMain")
+    void markCommodityIsSold(@Param("list") List<String> commodityList);
 }
