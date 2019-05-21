@@ -50,6 +50,15 @@ public class MainServiceImpl implements MainService {
     }
 
     @Override
+    public Data getByName(String name, int pageNum) {
+        if (name == null) {
+            return ResponseUtil.error(0, "参数为空");
+        }
+        PageHelper.startPage(pageNum, 10);
+        return ResponseUtil.success(mainMapper.getByName(name));
+    }
+
+    @Override
     public Data delete(List<String> list) {
         if (list.isEmpty()) {
             return ResponseUtil.error(0, "commodity id list is null or empty");

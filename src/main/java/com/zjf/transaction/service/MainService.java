@@ -12,6 +12,8 @@ public interface MainService {
 
     Data getCommodityById(String id);
 
+    Data getByName(String name, int pageNum);
+
     Data delete(List<String> list);
 
     Data markCommodityIsSold(List<String> list);

@@ -32,6 +32,11 @@ public class MainController {
         return mainService.getCommodityById(id);
     }
 
+    @GetMapping(value = "/getByName")
+    public Data getByName(String name, int pageNum) {
+        return mainService.getByName(name, pageNum);
+    }
+
     @DeleteMapping(value = "/delete")
     public Data delete(@RequestBody List<String> list) {
         return mainService.delete(list);

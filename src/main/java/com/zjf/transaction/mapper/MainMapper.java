@@ -20,6 +20,9 @@ public interface MainMapper {
     @Select("select * from t_commodity where is_sold = 0")
     List<Commodity> getAll();
 
+    @Select("select * from t_commodity where is_sold = 0 and name like '%${name}%'")
+    List<Commodity> getByName(@Param("name") String name);
+
     @Select("select * from t_commodity where id=#{id}")
     Commodity getCommodityById(@Param("id") String id);
 
